@@ -23,7 +23,7 @@ let multiple2 = (num: number): number => {
 let multiple3 = (num: number): void => {
   //   return num * 2;
   //  cant return num because the return is void
-  return console.log(num * 2);
+  // return console.log();
 };
 
 let sum = (num: number, num2: number, num3?: number) => {
@@ -31,6 +31,10 @@ let sum = (num: number, num2: number, num3?: number) => {
 };
 console.log(sum(5, 5));
 
-let user = (username: { name: string; age: number }) => {
-  console.log(username.name);
+let users = (username: {
+  firstname: string;
+  lastname: string;
+  middlename?: string;
+}) => {
+  console.log(username.firstname);
 };
