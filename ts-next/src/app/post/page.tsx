@@ -1,5 +1,5 @@
 import React from "react";
-import PostCard from "./[id]/page";
+import PostCard from "../../components/postCard/page";
 import CardProps from "../types/types";
 
 const getData = async () => {
@@ -15,7 +15,7 @@ const Post = async () => {
   const data = await getData();
 
   return (
-    <div>
+    <div className="grid grid-col1 lg:grid-cols-2 lg:gap-5 lg:px-20">
       {data.map((post: CardProps) => {
         // {data.map((post: {id: number; title: string; body:string}) => { */
 
