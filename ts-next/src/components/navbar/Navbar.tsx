@@ -5,36 +5,49 @@ const Navbar = () => {
     {
       id: 1,
       title: "home",
-      url: "/home",
+      url: "/",
     },
     {
       id: 2,
       title: "about",
       url: "/about",
     },
+    // {
+    //   id: 2,
+    //   title: "about",
+    //   url: "/about",
+    // },
     {
       id: 3,
       title: "posts",
-      url: "/posts",
+      url: "/post",
     },
     {
       id: 4,
       title: "contact",
       url: "/contact",
     },
+    {
+      id: 5,
+      title: "profile",
+      url: "/account",
+    },
   ];
 
   return (
     <div className=" bg-pink-100 w-full h-fit py-2 px-5 flex justify-between">
-      <div className=" font-medium">devbyodi</div>
+      <a href={"/"} className=" font-medium hover:underline cursor-pointer">
+        devbyodi
+      </a>
       <div className="flex gap-5">
-        {/* {navLinks.map((links:{id:number; title:string; url:string})=>{
-          return <div href={navLinks.url}></div>
-        })} */}
-        <div>home</div>
-        <div>about</div>
-        <div>posts</div>
-        <div>contact</div>
+        {/* {navLinks.map<React.JSX.Element>((links:{id:number; title:string; url:string})=>{ */}
+        {navLinks.map((v, i, a) => {
+          return (
+            <a href={v.url} className="hover:underline cursor-pointer">
+              {v.title}
+            </a>
+          );
+        })}
       </div>
     </div>
   );
